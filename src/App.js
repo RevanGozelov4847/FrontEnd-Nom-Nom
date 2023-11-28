@@ -1,5 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
+import "./assets/scss.main.scss"
+import Home from "./pages/Home";
 
 function App() {
   return (
@@ -7,6 +7,7 @@ function App() {
      <div>
       Hello World
       Let's Start
+      <Home/>
      </div>
     </div>
   );
