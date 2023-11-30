@@ -1,9 +1,10 @@
 import React from 'react'
+// import ProductsSwiper from '../components/ProductSwiper'
 
 const Home = () => {
   return (
     <div>
-      It is my Home page
+{/* <ProductsSwiper/> */}
     </div>
   )
 }
