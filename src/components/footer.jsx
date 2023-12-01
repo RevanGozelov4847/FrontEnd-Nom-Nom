@@ -2,7 +2,7 @@ import React from "react";
 import footerLogo from ""; //footer logo image
 import facebook from ""; //facebook image
 import instagram from ""; //instagram image
-import whatsapp from "";//whatsapp image
+// import whatsapp from "";//whatsapp image
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -30,11 +30,11 @@ const Footer = () => {
                   <img src={instagram} alt="" />
                 </div>
               </Link>
-              <Link to={"https://www.whatsapp.com/"}>
+              {/* <Link to={"https://www.whatsapp.com/"}>
                 <div className="whatsapp">
                   <img src={whatsapp} alt="" />
                 </div>
-              </Link>
+              </Link> */}
             </div>
             <div className="location">
               <i className="fa-solid locationIcon fa-location-arrow"></i>
@@ -42,22 +42,17 @@ const Footer = () => {
             </div>
           </div>
           <div className="footer2">
-            <p className="title">Categories</p>
-            <p></p>
-            <p> </p>
-          </div>
-          <div className="footer3">
             <p className="title">NomNom</p>
             <p>Blog</p>
             <p>About us</p>
             <p>Terms of use</p>
             <p>Help</p>
           </div>
-          <div className="footer4">
-            <p></p>
-            <p></p>
+          <div className="footer3">
+            <p>Refund</p>
+            <p>Delivery</p>
           </div>
-          <div className="footer5">
+          <div className="footer4">
             <p className="title">Contact</p>
             <p>email</p>
             <p>+994516235933</p>

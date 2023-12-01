@@ -7,7 +7,7 @@ const schema = yup.object().shape({
   email: yup
     .string()
     .email("Enter email")
-    .required("Enter duzgun email")
+    .required("Enter correct email")
     .matches(
       /^[a-z0-9](\.?[a-z0-9]){5,}@g(oogle)?mail\.com$/,
       "Please enter 'example@gmail.com' format"
