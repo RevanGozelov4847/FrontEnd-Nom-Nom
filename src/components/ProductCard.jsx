@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-// import { AiOutlineHeart, AiTwotoneHeart } from "react-icons/ai";
-import { Ai } from 'react-icons/ai';
+import { AiOutlineHeart, AiTwotoneHeart } from "react-icons/ai";
+// import { Ai } from 'react-icons/ai';
 
 const ProductCard = ({ item }) => {
   const [isInWishlist, setIsInWishlist] = useState(false);
