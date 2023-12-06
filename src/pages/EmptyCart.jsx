@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import cartImg from ""; //image of empty cart
+import cartImg from "../assets/images/emptyCart.png";  //image of empty cart
+
 
 const EmptyCart = () => {
   return (

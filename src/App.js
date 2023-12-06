@@ -9,25 +9,42 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Loader from "./components/Loader";
 
-const [loader, setLoader] = useState(true);
-import { useLocation, useNavigate } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
+
 
 import { useEffect, useState } from "react";
+import Cart from "./pages/Cart";
 
 
 function App() {
-  const location = useLocation();
-  const navigate = useNavigate();
+
+  // const location = useLocation();
+  // const navigate = useNavigate();
   const [isUser, setIsUser] = useState(false);
   const [loader, setLoader] = useState(true);
+
+  setTimeout(() => {
+    setLoader(false);
+  }, 1000);
 
   useEffect(() => {
     checkUser();
   }, []);
   
-  setTimeout(() => {
-    setLoader(false);
-  }, 1000);
+  const checkUser = async () => {
+    try {
+      let localUser = await JSON.parse(localStorage.getItem("user"));
+      if (localUser !== null) {
+        setIsUser(true)
+        return
+      } 
+     setIsUser(false)
+    //  navigate("/login");
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div className="App">
       <div>
@@ -35,7 +52,8 @@ function App() {
         <Navbar />
         <AnimatePresence mode="wait">
           <Router>
-            <Routes>
+          {/* <Routes key={location.pathname} location={location}> */}
+          <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
               {isUser ? <Route path="/cart" element={<Cart />} /> : null}

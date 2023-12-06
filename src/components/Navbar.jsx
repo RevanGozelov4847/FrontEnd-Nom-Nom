@@ -6,6 +6,8 @@ import SearchInput from "./SearchInput";
 import Select from "./Select";
 import { Link } from "react-router-dom";
 import { CartContext } from "../cartContext";
+import UserDrop from "./UserDrop";
+import { FiLogOut } from "react-icons/fi";
 
 const Navbar = () => {
   const { isUser, checkUser, logOut } = useContext(CartContext);
