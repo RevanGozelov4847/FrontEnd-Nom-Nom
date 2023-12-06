@@ -3,7 +3,10 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-export const CartContext = createContext();
+export const CartContext = createContext({
+  isUser: false, // Set a default value for isUser
+});
+
 export const CartProvider = ({ children }) => {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);

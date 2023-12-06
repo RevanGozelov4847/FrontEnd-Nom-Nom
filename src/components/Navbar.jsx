@@ -8,13 +8,17 @@ import { Link } from "react-router-dom";
 import { CartContext } from "../cartContext";
 import UserDrop from "./UserDrop";
 import { FiLogOut } from "react-icons/fi";
+// import { TbLocation } from "react-icons/tb";
+
+
+import Sidebar from "./Sidebar";
 
 const Navbar = () => {
-  const { isUser, checkUser, logOut } = useContext(CartContext);
+  const { isUser, checkUser, logOut } = useContext(CartContext) || {};
 
   useEffect(() => {
     checkUser();
-  }, []);
+  }, [checkUser]);
 
   const [clicked, setClicked] = useState(false);
 
@@ -68,7 +72,7 @@ const Navbar = () => {
       <div className="navbarBottom"> 
         <div className="container">
           <div className="navbarbottomRight">
-            <TbLocation className="locationIcon" fontSize="1.7rem" />
+            {/* <TbLocation className="locationIcon" fontSize="1.7rem" /> */}
             <span>Follow the order</span>
           </div>
         </div>

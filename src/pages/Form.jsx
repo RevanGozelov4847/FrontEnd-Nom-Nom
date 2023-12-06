@@ -100,8 +100,8 @@ const Form = () => {
                 </label>
                 <select id="location" {...register("location")}>
                   <option value="someOption">Select a city</option>
-                  <option value="otherOption1">Baku</option>
-                  <option value="otherOption2">Sumgayit</option>
+                  <option value="otherOption1">Qaradag</option>
+                  <option value="otherOption2">Baki</option>
                   <option value="otherOption3">Bineqedi</option>
                   <option value="otherOption4">Yasamal</option>
                 </select>

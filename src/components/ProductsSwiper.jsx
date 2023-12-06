@@ -1,58 +1,46 @@
-import "swiper/css/pagination";
-import "swiper/swiper.min.css";
-import { Navigation, Pagination, Scrollbar } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-import ProductCard from "./ProductCard";
-import React, { useContext } from "react";
-import { CartContext } from "../cartContext";
+// import 'swiper/swiper-bundle.css';
+// import { Swiper, SwiperSlide } from 'swiper/react';
+// import SwiperCore, { Navigation, Pagination, Scrollbar } from 'swiper/core';
 
-const ProductsSwiper = () => {
-  const { products } = useContext(CartContext);
+// import ProductCard from './ProductCard';
+// import React, { useContext } from 'react';
+// import { CartContext } from '../cartContext';
 
-  return (
-    <div>
-      <div className="newOne">
-        <h1>Categories</h1>
-        <div className="food-swiper-wrapper-container">
-          <Swiper
-            breakpoints={{
-              300: {
-                slidesPerView: 1,
-              },
+// SwiperCore.use([Navigation, Pagination, Scrollbar]);
 
-              380: {
-                slidesPerView: 2,
-              },
-              500: {
-                slidesPerView: 2,
-              },
-              768: {
-                slidesPerView: 3,
-              },
-              1024: {
-                slidesPerView: 4,
-              },
-            }}
-            modules={[Navigation, Pagination, Scrollbar]}
-            navigation
-            loop={true}
-            speed={600}
-            autoplay={1000}
-          >
-            <div className="swiperAll">
-              {products?.map((item) => {
-                return (
-                  <SwiperSlide className="new" key={item.id}>
-                    <ProductCard item={item} />
-                  </SwiperSlide>
-                );
-              })}
-            </div>
-          </Swiper>
-        </div>
-      </div>
-    </div>
-  );
-};
+// const ProductsSwiper = () => {
+//   const { products } = useContext(CartContext);
 
-export default ProductsSwiper;
+//   return (
+//     <div>
+//       <div className="newOne">
+//         <h1>Categories</h1>
+//         <div className="food-swiper-wrapper-container">
+//           <Swiper
+//             breakpoints={{
+//               300: { slidesPerView: 1 },
+//               380: { slidesPerView: 2 },
+//               500: { slidesPerView: 2 },
+//               768: { slidesPerView: 3 },
+//               1024: { slidesPerView: 4 },
+//             }}
+//             navigation
+//             pagination={{ clickable: true }}
+//             scrollbar={{ draggable: true }}
+//             loop={true}
+//             speed={600}
+//             autoplay={{ delay: 1000 }}
+//           >
+//             {products?.map((item) => (
+//               <SwiperSlide className="new" key={item.id}>
+//                 <ProductCard item={item} />
+//               </SwiperSlide>
+//             ))}
+//           </Swiper>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default ProductsSwiper;

@@ -1,8 +1,9 @@
 import React from "react";
-import footerLogo from ""; //footer logo image
-import facebook from ""; //facebook image
-import instagram from ""; //instagram image
+import footerLogo from "../assets/images/becauseLove-2.png"; //footer logo image
+import facebook from "../assets/images/becauseLove-2.png"; //facebook image
+import instagram from "../assets/images/becauseLove-2.png"; //instagram image
 // import whatsapp from "";//whatsapp image
+import footerVisa from "../assets/images/becauseLove-1.png"
 import { Link } from "react-router-dom";
 
 const Footer = () => {
