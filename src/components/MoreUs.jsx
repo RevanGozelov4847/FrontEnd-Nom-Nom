@@ -4,7 +4,7 @@ import swiperImage2 from "../assets/images/moreUsSwiper-2.png";
 import "swiper/css/pagination";
 import React from "react";
 import { Navigation, Pagination, Scrollbar } from "swiper";
-import "swiper/swiper.min.css";
+// import "swiper/swiper.min.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { TbTruckDelivery } from "react-icons/tb";

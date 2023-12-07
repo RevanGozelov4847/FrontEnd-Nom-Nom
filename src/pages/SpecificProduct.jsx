@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { CartContext } from "../cartContext";
 import Accordion from "../components/Accordion";
-import ProductsSwiper from "../components/ProductsSwiper";
+import ProductSwiper from "../components/ProductSwiper";
 import ResponsiveAccordion from "../components/ResponsiveAccordion";
 import Swal from "sweetalert2";
 import {
@@ -148,7 +148,7 @@ const SpecificProduct = () => {
         </div>
       </div>
       <div className="products">
-        <ProductsSwiper />
+        <ProductSwiper />
       </div>
     </AnimatedPage>
   );

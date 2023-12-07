@@ -64,6 +64,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/products" element={<Products />} />
               <Route path="/products/:id" element={<SpecificProduct />} />
+              
               {/* {isUser ? <Route path="/cart" element={<Cart />} /> : null} */}
               <Route path="/form" element={<Form />} />
               <Route path="/favorites" element={<Favorites />} />

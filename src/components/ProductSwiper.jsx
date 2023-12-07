@@ -2,14 +2,13 @@
 import ProductCard from "./ProductCard";
 import React, { useContext } from "react";
 import { CartContext } from "../cartContext";
-
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar } from 'swiper';
+import SwiperCore, { Navigation, Pagination, Scrollbar, Autoplay } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-
+SwiperCore.use([Navigation, Pagination, Scrollbar, Autoplay]);
 
 const ProductsSwiper = () => {
   const { products } = useContext(CartContext);

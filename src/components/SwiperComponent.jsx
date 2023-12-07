@@ -1,5 +1,5 @@
 import { Navigation, Pagination, Scrollbar } from "swiper";
-import "swiper/swiper.min.css";
+// import "swiper/swiper.min.css";
 import swiperImage1 from "";//meat
 import swiperImage2 from "";//fruits
 import swiperImage3 from "";//vegetables
