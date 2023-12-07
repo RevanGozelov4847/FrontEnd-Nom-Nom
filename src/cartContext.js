@@ -23,7 +23,7 @@ export const CartProvider = ({ children }) => {
 
   const getData = async () => {
     try {
-      await axios.get(`http://localhost:3000/api/products`).then((res) => {
+      await axios.get(`http://localhost:5004/api/products`).then((res) => {
         setProducts(res.data);
       });
     } catch (error) {

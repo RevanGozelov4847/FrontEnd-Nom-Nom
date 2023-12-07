@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 // import Loader from "./components/Loader";
 import Form from "./pages/Form";
-import Footer from "./components/footer";
+import Footer from "./components/Footer";
 import Favorites from "./pages/Favorites";
 import Accordion from "./components/Accordion";
 import Sidebar from "./components/Sidebar";

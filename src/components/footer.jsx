@@ -1,9 +1,9 @@
 import React from "react";
-import footerLogo from "../assets/images/becauseLove-2.png"; //footer logo image
-import facebook from "../assets/images/becauseLove-2.png"; //facebook image
-import instagram from "../assets/images/becauseLove-2.png"; //instagram image
-// import whatsapp from "";//whatsapp image
-import footerVisa from "../assets/images/becauseLove-1.png"
+import footerLogo from "../assets/images/footer-logo.png";
+import facebook from "../assets/images/facebook.png";
+import instagram from "../assets/images/instagram.png";
+import whatsapp from "../assets/images/whatsapp.png";
+import footerVisa from "../assets/images/footer-mastercard1.png";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -16,7 +16,7 @@ const Footer = () => {
               <img src={footerLogo} alt="logo" />
             </div>
             <p className="footer1Description">
-            Quote of Our Website
+              Everything that makes your moments special and memorable
             </p>
             <div className="social">
               <Link to={"https://www.facebook.com/"}>
@@ -24,18 +24,16 @@ const Footer = () => {
                   <img src={facebook} alt="" />
                 </div>
               </Link>
-              {/* Instagram page */}
-              <Link to={"https://www.instagram.com/"}> 
-
+              <Link to={"https://www.instagram.com/"}>
                 <div className="instagram">
                   <img src={instagram} alt="" />
                 </div>
               </Link>
-              {/* <Link to={"https://www.whatsapp.com/"}>
+              <Link to={"https://www.whatsapp.com/"}>
                 <div className="whatsapp">
                   <img src={whatsapp} alt="" />
                 </div>
-              </Link> */}
+              </Link>
             </div>
             <div className="location">
               <i className="fa-solid locationIcon fa-location-arrow"></i>
@@ -43,22 +41,27 @@ const Footer = () => {
             </div>
           </div>
           <div className="footer2">
-            <p className="title">NomNom</p>
+            <p className="title">Categories</p>
+            <p>Flowers</p>
+            <p>Christmas tree</p>
+          </div>
+          <div className="footer3">
+            <p className="title">Olee</p>
             <p>Blog</p>
             <p>About us</p>
             <p>Terms of use</p>
             <p>Help</p>
           </div>
-          <div className="footer3">
+          <div className="footer4">
             <p>Refund</p>
             <p>Delivery</p>
           </div>
-          <div className="footer4">
+          <div className="footer5">
             <p className="title">Contact</p>
-            <p>email</p>
-            <p>+994516235933</p>
+            <p>info@olee.az</p>
+            <p>+994502281199</p>
             <p>
-             address
+              Baku city, Narimanov district, Fatali Xan - Xoyski street. 130
             </p>
           </div>
         </div>
