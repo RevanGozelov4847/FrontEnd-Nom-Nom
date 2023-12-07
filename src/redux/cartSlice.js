@@ -1,9 +1,10 @@
 // cartSlice.js
 import { createSlice } from '@reduxjs/toolkit';
 
+
 export const cartSlice = createSlice({
   name: 'cart',
-  initialState: { items: [] },
+  initialState: { items: [], favorites: [] },  // Added favorites array to state
   reducers: {
     addToCart: (state, action) => {
       const { id, quantity } = action.payload;
@@ -32,9 +33,23 @@ export const cartSlice = createSlice({
         item.quantity -= 1;
       }
     },
+    clearCart: (state) => {
+      state.items = [];
+    },
+    addToFavorite: (state, action) => {
+      const product = action.payload;
+      if (!state.favorites.find(item => item.id === product.id)) {
+        state.favorites.push(product);
+      }
+    },
+    removeFromFavorite: (state, action) => {
+      const productId = action.payload;
+      state.favorites = state.favorites.filter(item => item.id !== productId);
+    },
   },
 });
 
-export const { addToCart, removeFromCart, incrementCount, decrementCount } = cartSlice.actions;
+export const { addToCart, removeFromCart, incrementCount, decrementCount, clearCart, addToFavorite, removeFromFavorite } = cartSlice.actions;
+
 
 export default cartSlice.reducer;

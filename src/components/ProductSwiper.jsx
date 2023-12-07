@@ -1,9 +1,11 @@
 
 import ProductCard from "./ProductCard";
-import React, { useContext } from "react";
-import { CartContext } from "../cartContext";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination, Scrollbar, Autoplay } from 'swiper';
+import React from "react";
+import { useSelector } from 'react-redux';
+
+
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -11,7 +13,7 @@ import 'swiper/css/scrollbar';
 SwiperCore.use([Navigation, Pagination, Scrollbar, Autoplay]);
 
 const ProductsSwiper = () => {
-  const { products } = useContext(CartContext);
+  const products = useSelector(state => state.products.items);
 
   return (
     <div>

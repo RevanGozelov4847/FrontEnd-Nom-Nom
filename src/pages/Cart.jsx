@@ -1,11 +1,11 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import AnimatedPage from "../AnimatedPage";
-import { CartContext } from "../cartContext";
 import CartProduct from "../components/CartProduct";
+import { useSelector } from 'react-redux';
 
 const Cart = () => {
-  const { cart } = useContext(CartContext);
+  const cart = useSelector(state => state.cart.items);
   const [price, setPrice] = useState(0);
 
   useEffect(() => {
