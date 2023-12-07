@@ -5,14 +5,12 @@ import ProductSwiper from "../components/ProductSwiper";
 import SwiperComponent from "../components/SwiperComponent"
 const Home = () => {
   return (
-    <div>
       <AnimatedPage>
-        < SwiperComponent/>
-        <MoreUs />
+        <SwiperComponent/>
+        <MoreUs/>
         <BecauseLove />
         <ProductSwiper />
       </AnimatedPage>
-    </div>
   );
 };
 

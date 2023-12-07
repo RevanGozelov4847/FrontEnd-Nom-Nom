@@ -1,17 +1,14 @@
 import { Navigation, Pagination, Scrollbar } from "swiper";
 // import "swiper/swiper.min.css";
-import swiperImage1 from "";//meat
-import swiperImage2 from "";//fruits
-import swiperImage3 from "";//vegetables
-import swiperImage4 from "";//grains
-import swiperImage5 from "";//herbs
-import swiperImage6 from "";//spices
-import swiperImage7 from "";//diary products
-import swiperImage8 from "";//oils
-import swiperImage9 from "";//drinks
-
-
-
+import swiperImage1 from "../assets/images/becauseLove-1.png";//meat
+import swiperImage2 from "../assets/images/becauseLove-1.png";//fruits
+import swiperImage3 from "../assets/images/becauseLove-1.png";//vegetables
+import swiperImage4 from "../assets/images/becauseLove-1.png";//grains
+import swiperImage5 from "../assets/images/becauseLove-1.png";//herbs
+import swiperImage6 from "../assets/images/becauseLove-1.png";//spices
+import swiperImage7 from "../assets/images/becauseLove-1.png";//diary products
+import swiperImage8 from "../assets/images/becauseLove-1.png";//oils
+import swiperImage9 from "../assets/images/becauseLove-1.png";//drinks
 
 import "swiper/css/navigation";
 import "swiper/css/pagination";
