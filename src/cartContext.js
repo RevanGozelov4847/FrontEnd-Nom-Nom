@@ -1,9 +1,9 @@
-import { createContext, useEffect } from "react";
-import React, { useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 export const CartContext = createContext();
+
 export const CartProvider = ({ children }) => {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
@@ -13,6 +13,7 @@ export const CartProvider = ({ children }) => {
   const [price, setPrice] = useState();
   const [isUser, setIsUser] = useState(true);
   const [isInWishlist, setIsInWishlist] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     getData();
@@ -43,7 +44,6 @@ export const CartProvider = ({ children }) => {
     }
   };
 
-
   const addToFavorite = async (newProduct) => {
     const existingProduct = favorite.find((fav) => fav.id === newProduct.id);
     if (existingProduct) {
@@ -51,18 +51,6 @@ export const CartProvider = ({ children }) => {
     }
     setFavorite([...favorite, newProduct]);
   };
-
-
-  useEffect(() => {
-    const localFav = localStorage.getItem("favorite");
-    if (localFav) {
-      setFavorite(JSON.parse(localFav));
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("favorite", JSON.stringify(favorite));
-  }, [favorite]);
 
   const removeFromCart = (id) => {
     const filteredArray = cart.filter((product) => product.id !== id);
@@ -127,7 +115,7 @@ export const CartProvider = ({ children }) => {
       await localStorage.removeItem("user");
       setIsUser(false);
       navigate("/login");
-      window.location.reload()
+      window.location.reload();
     } catch (error) {
       console.log(error);
       navigate("/error");
@@ -171,6 +159,8 @@ export const CartProvider = ({ children }) => {
     logOut,
     isInWishlist,
     setIsInWishlist,
+    searchTerm,
+    setSearchTerm,
   };
 
   return <CartContext.Provider value={values}>{children}</CartContext.Provider>;

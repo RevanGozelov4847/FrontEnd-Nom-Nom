@@ -1,13 +1,15 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
 import { CartContext } from "../cartContext";
+import { Link } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
 import AnimatedPage from "../AnimatedPage";
 
 const Products = () => {
+  const { products, searchTerm } = useContext(CartContext);
   const [isOpen, setIsOpen] = useState(false);
   const [isOpened, setIsOpened] = useState(false);
-  const { products } = useContext(CartContext);
+  const [minPrice, setMinPrice] = useState("");
+  const [maxPrice, setMaxPrice] = useState("");
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -16,6 +18,25 @@ const Products = () => {
   const handleClicked = () => {
     setIsOpened(!isOpened);
   };
+
+  const handleMinPriceChange = (e) => {
+    setMinPrice(e.target.value);
+  };
+
+  const handleMaxPriceChange = (e) => {
+    setMaxPrice(e.target.value);
+  };
+
+  const filterProducts = (product) => {
+    const nameMatches = product.name.toLowerCase().includes(searchTerm.toLowerCase());
+    const priceMatches = (!minPrice || product.price >= parseFloat(minPrice)) &&
+                         (!maxPrice || product.price <= parseFloat(maxPrice));
+    return nameMatches && priceMatches;
+  };
+  
+
+  const filteredProducts = products.filter(filterProducts);
+
   return (
     <AnimatedPage>
       <div className="objectives bg-header-products">
@@ -63,26 +84,34 @@ const Products = () => {
               </div>
               {isOpened && (
                 <div className="priceInterval">
-                  <input type="text" />
+                  <input
+                    type="text"
+                    placeholder="Min Price"
+                    value={minPrice}
+                    onChange={handleMinPriceChange}
+                  />
                   <i className="fa-solid minusPrice fa-minus"></i>
-                  <input type="text" />
+                  <input
+                    type="text"
+                    placeholder="Max Price"
+                    value={maxPrice}
+                    onChange={handleMaxPriceChange}
+                  />
                 </div>
               )}
             </div>
             <button>Search</button>
           </div>
           <div className="resultProducts">
-            {products?.map((item) => {
-              return (
-                <Link
-                  to={`/products/${item.id}`}
-                  key={item.id}
-                  className="prod-card-wrapper"
-                >
-                  <ProductCard item={item} />
-                </Link>
-              );
-            })}
+            {filteredProducts.map((item) => (
+              <Link
+                to={`/products/${item.id}`}
+                key={item.id}
+                className="prod-card-wrapper"
+              >
+                <ProductCard item={item} />
+              </Link>
+            ))}
           </div>
         </div>
       </div>
