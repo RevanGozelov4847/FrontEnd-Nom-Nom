@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div>
       <AnimatedPage>
-        <p>Homssss</p>
+<p>Sall</p>        
         <SwiperComponent />
         <MoreUs />
         <BecauseLove />
