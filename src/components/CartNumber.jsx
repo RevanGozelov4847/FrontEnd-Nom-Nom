@@ -1,15 +1,14 @@
-import React, { useEffect, useState } from "react";
-import { useSelector } from 'react-redux';
-import { BsCart4 } from 'react-icons/bs'
+import React, {useContext, useEffect, useState} from "react";
+import {CartContext} from "../cartContext";
+import {BsCart4} from 'react-icons/bs'
+
 const CartNumber = () => {
-  const cart = useSelector(state => state.cart.items);
-  const [total, setTotal] = useState(0);
-
-  useEffect(() =>{
-      const totalQuantity = cart.reduce((acc, curr) => acc + curr.quantity, 0);
-      setTotal(totalQuantity);
-  }, [cart]);
-
+    const {cart, isUser} = useContext(CartContext);
+    const [total, setTotal] = useState(0);
+    useEffect(() =>{
+        const totalQuantity = cart.reduce((acc, curr) => acc +curr.quantity, 0);
+        setTotal(totalQuantity);
+    }, [cart]);
 
     return (
     <button className="cartNumber">

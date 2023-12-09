@@ -1,17 +1,14 @@
-import React from "react";
-import { useSelector, useDispatch } from 'react-redux';
-import { removeFromCart, decrementCount, incrementCount } from '../redux/cartSlice';
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { CartContext } from "../cartContext";
 
 const CartProduct = () => {
-  const cart = useSelector(state => state.cart.items);
-  const dispatch = useDispatch();
+  const { cart, decrementCount, incrementCount, removeFromCart } =
+    useContext(CartContext);
   const navigate = useNavigate();
-
-  if (cart.length === 0) {
-    navigate("/emptyCart");
+  {
+    cart.length === 0 && navigate("/emptyCart");
   }
-
   return (
     <>
       {cart.map((item) => (
@@ -22,7 +19,7 @@ const CartProduct = () => {
           <div className="cartInfo">
             <div className="headline">
               <p>{item?.name}</p>
-              <button onClick={() => dispatch(removeFromCart(item.id))}>
+              <button onClick={() => removeFromCart(item.id)}>
                 <i className="fa-solid cross fa-xl fa-xmark"></i>
               </button>
             </div>
@@ -31,11 +28,11 @@ const CartProduct = () => {
             </div>
             <div className="numberPrice">
               <div className="number">
-                <button onClick={() => dispatch(decrementCount(item.id))}>
+                <button onClick={() => decrementCount(item.id)}>
                   <i className="fa-solid fa-minus"></i>
                 </button>
                 {item.quantity}
-                <button onClick={() => dispatch(incrementCount(item.id))}>
+                <button onClick={() => incrementCount(item.id)}>
                   <i className="fa-solid fa-plus"></i>
                 </button>
               </div>

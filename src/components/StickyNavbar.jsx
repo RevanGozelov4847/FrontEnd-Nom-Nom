@@ -1,13 +1,11 @@
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
-import React, { useEffect, useState } from "react";
-import { useSelector } from 'react-redux';
-
+import { CartContext } from "../cartContext";
 
 const StickyNavbar = () => {
   const [total, setTotal] = useState(0);
-  const cart = useSelector(state => state.cart.items);
-  const favorite = useSelector(state => state.favorite.items);
+  const { cart } = useContext(CartContext);
+  const { favorite } = useContext(CartContext);
 
   useEffect(() => {
     const totalQuantity = cart.reduce((acc, curr) => acc + curr.quantity, 0);

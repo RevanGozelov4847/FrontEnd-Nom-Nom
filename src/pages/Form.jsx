@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import AnimatedPage from "../AnimatedPage";
 import { useNavigate } from "react-router-dom";
-import { useSelector, useDispatch } from 'react-redux';
-import { clearCart } from '../redux/cartSlice'; 
+import { CartContext } from "../cartContext";
 
 const phoneRegExp =
   /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/;
@@ -28,9 +27,8 @@ const schema = yup.object().shape({
 });
 
 const Form = () => {
-  const cart = useSelector(state => state.cart.items);
-  const dispatch = useDispatch();
   const navigate = useNavigate();
+  const { setCart, cart } = useContext(CartContext);
   const [isChecked, setIsChecked] = useState(false);
   const [price, setPrice] = useState(0);
   const total = isChecked ? price + 5 : price;
@@ -43,9 +41,8 @@ const Form = () => {
     resolver: yupResolver(schema),
   });
 
-
   const submitForm = () => {
-    dispatch(clearCart());
+    setCart([]);
     navigate("/");
   };
 

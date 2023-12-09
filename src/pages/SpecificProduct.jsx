@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { useSelector, useDispatch } from 'react-redux';
+import { CartContext } from "../cartContext";
 import Accordion from "../components/Accordion";
 import ProductSwiper from "../components/ProductSwiper";
 import ResponsiveAccordion from "../components/ResponsiveAccordion";
-import { addToCart, addToFavorite, removeFromFavorite } from '../redux/cartSlice'; 
-
 import Swal from "sweetalert2";
 import {
   AiOutlineHeart,
@@ -15,10 +13,19 @@ import {
 import AnimatedPage from "../AnimatedPage";
 
 const SpecificProduct = () => {
-  const isInWishlist = useSelector(state => state.cart.favorites.some(item => item.id === product?.id));
-  const dispatch = useDispatch();
+  const {
+    addToCart,
+    addToFavorite,
+    removeFromFavorite,
+    isInWishlist,
+    setIsInWishlist,
+  } = useContext(CartContext);
   const [product, setProduct] = useState(null);
   const { id } = useParams();
+
+  const handleToggleWishlist = (newProduct) => {
+    setIsInWishlist(!isInWishlist);
+  };
 
   function showSuccessAlert() {
     Swal.fire({
@@ -36,19 +43,11 @@ const SpecificProduct = () => {
   }
 
   const handleAddToCart = (newProduct) => {
-    dispatch(addToCart(newProduct)); // Dispatch an action to add to cart
+    addToCart(newProduct);
     showSuccessAlert();
   };
 
-  const handleToggleWishlist = () => {
-    if (isInWishlist) {
-      dispatch(removeFromFavorite(product.id)); // Dispatch an action to remove from wishlist
-    } else {
-      dispatch(addToFavorite(product)); // Dispatch an action to add to wishlist
-    }
-  };
-
-   useEffect(() => {
+  useEffect(() => {
     fetch(`http://localhost:5004/api/products/${id}`)
       .then((res) => res.json())
       .then((data) => setProduct(data));
