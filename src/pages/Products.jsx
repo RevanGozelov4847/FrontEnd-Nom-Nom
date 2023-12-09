@@ -1,26 +1,13 @@
-// Products.jsx
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from 'react-redux';
-import { addToCart, removeFromCart } from '../redux/cartSlice';
+import { CartContext } from "../cartContext";
 import ProductCard from "../components/ProductCard";
 import AnimatedPage from "../AnimatedPage";
 
 const Products = () => {
-  const dispatch = useDispatch();
-  const cart = useSelector(state => state.cart.items);
-  const products = useSelector(state => state.products);
-
-  const handleAddToCart = (product) => {
-    dispatch(addToCart({ id: product.id, quantity: 1, name: product.name }));
-  };
-
-  const handleRemoveFromCart = (productId) => {
-    dispatch(removeFromCart({ id: productId }));
-  };
-
   const [isOpen, setIsOpen] = useState(false);
   const [isOpened, setIsOpened] = useState(false);
+  const { products } = useContext(CartContext);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -29,7 +16,6 @@ const Products = () => {
   const handleClicked = () => {
     setIsOpened(!isOpened);
   };
-
   return (
     <AnimatedPage>
       <div className="objectives bg-header-products">
@@ -86,30 +72,19 @@ const Products = () => {
             <button>Search</button>
           </div>
           <div className="resultProducts">
-            {products?.map((item) => (
-              <div key={item.id} className="prod-card-wrapper">
-                <ProductCard item={item} />
-                <button onClick={() => handleAddToCart(item)}>Add to Cart</button>
-                <button onClick={() => handleRemoveFromCart(item.id)}>Remove from Cart</button>
-                <Link to={`/products/${item.id}`} className="prod-card-wrapper">
+            {products?.map((item) => {
+              return (
+                <Link
+                  to={`/products/${item.id}`}
+                  key={item.id}
+                  className="prod-card-wrapper"
+                >
                   <ProductCard item={item} />
                 </Link>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
-      </div>
-
-      {/* Display Cart Items */}
-      <div className="cart">
-        <h2>Shopping Cart</h2>
-        <ul>
-          {cart.map((cartItem) => (
-            <li key={cartItem.id}>
-              {cartItem.name} - Quantity: {cartItem.quantity}
-            </li>
-          ))}
-        </ul>
       </div>
     </AnimatedPage>
   );
