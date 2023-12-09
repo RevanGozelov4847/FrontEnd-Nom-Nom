@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { CartContext } from "../cartContext";
 import Accordion from "../components/Accordion";
-import ProductSwiper from "../components/ProductSwiper";
+import ProductSwiper from "../components/ProductsSwiper";
 import ResponsiveAccordion from "../components/ResponsiveAccordion";
 import Swal from "sweetalert2";
 import {
@@ -91,14 +91,14 @@ const SpecificProduct = () => {
               <span>
                 <i className="fa-regular fa-clock"></i>
               </span>
-              <span>1 Hour in the process</span>
+              <span>1 Hours in the process</span>
             </div>
             <div className="responsiveAccordion">
               <ResponsiveAccordion />
             </div>
           </div>
           <div className="price">
-            <p>The Final Amount</p>
+            <p>The final amount</p>
             <span>{product?.price}₼</span>
           </div>
           <p className="information">

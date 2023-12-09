@@ -27,23 +27,30 @@ function Tabs() {
         <div
           className={toggleState === 1 ? "content  active-content" : "content"}
         >
-
-            {/* bu nedi bilmedim customer?*/}
-          <p>eustoma</p> 
+          <p>eustoma</p>
         </div>
 
         <div
           className={toggleState === 2 ? "content  active-content" : "content"}
         >
           <p>
-           You deserve the best service, for this we use a risk-free delivery module. <br /> If the product is not according to your wishes during delivery (regardless of cash or non-cash payment), it is immediately returned and replaced with a new product of a higher price. <br />
+            Siz xidmətin ən yaxşısına layiqsiniz , bunun üçün risksiz çatdırılma
+            modulundan istifadə edirik. <br /> Məhsul çatdırılarkən ( nəğd və ya
+            qeyri nəğd ödəmə fərqi olmadan ) istəyinizə uyğun olmayan hal olarsa
+            dərhal geri qaytarılır və daha yüksək qiymətli yeni məhsulla əvəz
+            edilir. <br />
+            <br /> Çatdırılma özəl Olee Premium avtomobili ilə sürətli icra
+            olunur.
             <br />
-            <br /> Our dedicated employees are constantly working for the better.
+            <br /> Xüsusi xidmət almış əməkdaşlarımız daima daha yaxşısı üçün
+            fasiləsiz çalışır.
             <br />
-            <br />Delivery is free to Baku city center, and to Sumgayit, Khirdalan and Baku villages are estimated according to the area.{" "}
+            <br /> Çatdırılma Bakı şəhəri mərkəzi üçün PULSUZ , Sumqayıt ,
+            Xırdalan və Bakı kəndlərinə isə əraziyə uyğun qiymətləndirilir.{" "}
             <br />
             <br />
-        You can get fast delivery according to pre-selected time and date.
+            Əvvəlcədən seçilmiş vaxta və tarixə görə sürətli çatdırılma əldə edə
+            bilərsiniz
           </p>
         </div>
       </div>

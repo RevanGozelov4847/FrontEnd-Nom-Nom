@@ -1,6 +1,3 @@
-
-// select the language
-
 import React, { useState } from "react";
 import "../assets/scss/components/select.scss";
 import { IoIosArrowDown } from "react-icons/io";

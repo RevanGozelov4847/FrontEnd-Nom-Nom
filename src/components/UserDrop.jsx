@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FiUser } from "react-icons/fi";
 
-const UserDrop = () => {
+const MyIcon = () => {
   const [clicked, setClicked] = useState(false);
 
 useEffect(() => {
@@ -43,4 +43,4 @@ return (
 );
 
 };
-export default UserDrop;
+export default MyIcon;

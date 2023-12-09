@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import loginImage from "../../src/assets/images/loginImage.png";
-import * as yup from 'yup';
+import loginImage from "../../src/assets/images/loginImage.png";
+import * as yup from "yup";
 
 const schema = yup.object().shape({
   email: yup
     .string()
     .email("Enter email")
-    .required("Enter correct email")
+    .required("Enter duzgun email")
     .matches(
       /^[a-z0-9](\.?[a-z0-9]){5,}@g(oogle)?mail\.com$/,
       "Please enter 'example@gmail.com' format"
@@ -54,8 +54,7 @@ const Login = () => {
   return (
     <div className="login">
       <div className="imageContainer">
-        {/* <img src={loginImage} alt="" /> */}
-        <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_1280.jpg" alt="flower" />
+        <img src={loginImage} alt="" />
       </div>
       <form className="form-control">
         <label htmlFor="email">Email</label>
