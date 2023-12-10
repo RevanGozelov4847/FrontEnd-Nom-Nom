@@ -1,5 +1,6 @@
-import swiperImage1 from "../assets/images/moreUsSwiper-1.png";
-import swiperImage2 from "../assets/images/moreUsSwiper-2.png";
+import swiperImage1 from "../assets/images/meal1.jpeg";
+import swiperImage2 from "../assets/images/meal2.jpeg";
+import swiperImage3 from "../assets/images/meal3.jpeg";
 
 import "swiper/css/pagination";
 import React from "react";
@@ -32,9 +33,16 @@ const MoreUs = () => {
                 <img src={swiperImage1} alt={"iame"} />
               </div>
             </SwiperSlide>
+
             <SwiperSlide>
               <div className="imgContainer">
                 <img src={swiperImage2} alt={"sc"} />
+              </div>
+            </SwiperSlide>
+            
+            <SwiperSlide>
+              <div className="imgContainer">
+                <img src={swiperImage3} alt={""} />
               </div>
             </SwiperSlide>
           </Swiper>
