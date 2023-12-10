@@ -32,9 +32,10 @@ function Sidebar() {
           <div className="imgContainer">
             <img src={menuImage} alt="" />
           </div>
+          
           {/* <SwiperComponent /> */}
 
-          <div className="filter">
+          {/* <div className="filter">
             <div className="purpose">
               <div className="title">
                 <button className="buttonFilter" onClick={handleClick}>
@@ -65,7 +66,8 @@ function Sidebar() {
                 </div>
               )}
             </div>
-          </div>
+          </div> */}
+
         </div>
       </div>
     </>
