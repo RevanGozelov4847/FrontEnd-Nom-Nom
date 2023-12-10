@@ -27,13 +27,13 @@ function App() {
     {
       id: 1,
       title: "About the product",
-      content: "eustoma",
+      content: "info",
     },
     {
       id: 2,
       title: "Delivery",
       content:
-        "Siz xidmətin ən yaxşısına layiqsiniz , bunun üçün risksiz çatdırılma modulundan istifadə edirik. Məhsul çatdırılarkən ( nəğd və ya qeyri nəğd ödəmə fərqi olmadan ) istəyinizə uyğun olmayan hal olarsa dərhal geri qaytarılır və daha yüksək qiymətli yeni məhsulla əvəz edilir. Çatdırılma özəl Olee Premium avtomobili ilə sürətli icra olunur. Xüsusi xidmət almış əməkdaşlarımız daima daha yaxşısı üçün fasiləsiz çalışır. Çatdırılma Bakı şəhəri mərkəzi üçün PULSUZ , Sumqayıt  , Xırdalan və Bakı kəndlərinə isə əraziyə uyğun qiymətləndirilir. Əvvəlcədən seçilmiş vaxta və tarixə görə sürətli çatdırılma əldə edə bilərsiniz",
+        "Our purpose is providing the best of the service, and to achive that we use the Risk Free Delivery Module. If the product is delivered (cash or online does not matter), it is immediately refunded if it is not inappropriate for your request and is replaced with a higher value of a higher value.Delivery is executed fast with the Private NomNom Premium car. Our special service employees always work continuously for better. Delivery is assessed in accordance with the territory of free, Sumgayit, Khirdalan and Baku villages for the Baku Center. You can get fast delivery in advance by the time and date."
     },
   ];
 
