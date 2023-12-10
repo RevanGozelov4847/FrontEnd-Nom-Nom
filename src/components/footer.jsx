@@ -40,28 +40,30 @@ const Footer = () => {
               <p>Follow the order</p>
             </div>
           </div>
-          <div className="footer2">
+          
+          {/* <div className="footer2">
             <p className="title">Categories</p>
             <p>Flowers</p>
             <p>Christmas tree</p>
-          </div>
-          <div className="footer3">
-            <p className="title">Olee</p>
+          </div> */}
+
+          <div className="footer2">
+            <p className="title">NomNom</p>
             <p>Blog</p>
             <p>About us</p>
             <p>Terms of use</p>
             <p>Help</p>
           </div>
-          <div className="footer4">
+          <div className="footer3">
             <p>Refund</p>
             <p>Delivery</p>
           </div>
-          <div className="footer5">
+          <div className="footer4">
             <p className="title">Contact</p>
-            <p>info@olee.az</p>
-            <p>+994502281199</p>
+            <p>nomnom23@gmail.com</p>
+            <p>+994516235933</p>
             <p>
-              Baku city, Narimanov district, Fatali Xan - Xoyski street. 130
+              Baku city, Ganjlik District.
             </p>
           </div>
         </div>
