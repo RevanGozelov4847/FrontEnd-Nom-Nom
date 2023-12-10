@@ -1,60 +1,60 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import professional1 from "";
-import professional2 from "";
-import professional3 from "";
-import professional4 from "";
-import professional5 from "";
+import love1 from "../assets/images/becauseLove-1.png";
+import love2 from "../assets/images/becauseLove-2.png";
+import love3 from "../assets/images/becauseLove-3.png";
+import love4 from "../assets/images/becauseLove-4.png";
+import love5 from "../assets/images/becauseLove-5.png";
 
-const Professionals = () => {
+const BecauseLove = () => {
   return (
     <section>
       <div className="containerMore">
-        <p className="title">Professionals with Quotes</p>
+        <p className="title">Because you love</p>
         <p className="description-1">
           Olee-da olan bütün məhsullar geri qaytarma.
         </p>
         <p className="description-2">
           Sifarişlərinizi həm təhvil alarkən qapıda.
         </p>
-        <div className="professionalImages">
-          <div className="professional-left">
+        <div className="loveImages">
+          <div className="love-left">
             <Link to={"/products"}>
-              <div className="professional-left-1">
-                <img className="professional1" src={professional1} alt="" />
-                <button className="button">Professional_Name1</button>
+              <div className="love-left-1">
+                <img className="love1" src={love1} alt="" />
+                <button className="button">Cookies</button>
               </div>
             </Link>
 
             <Link to={"/products"}>
-              <div className="professional-left-2">
-                <img className="professional2" src={professional2} alt="" />
-                <button className="button">Professional_Name2</button>
+              <div className="love-left-2">
+                <img className="love2" src={love2} alt="" />
+                <button className="button">Porfumery</button>
               </div>
             </Link>
           </div>
 
           <Link to={"/products"}>
-            <div className="professional-center">
-              <div className="professional-center-1">
-                <img className="professional3" src={professional3} alt="" />
-                <button className="button">Professional_Name3</button>
+            <div className="love-center">
+              <div className="love-center-1">
+                <img className="love3" src={love3} alt="" />
+                <button className="button">Flowers</button>
               </div>
             </div>
           </Link>
 
-          <div className="professional-right">
+          <div className="love-right">
             <Link to={"/products"}>
-              <div className="professional-right-1">
-                <img className="professional4" src={professional4} alt="" />
-                <button className="button">Professional_Name4</button>
+              <div className="love-right-1">
+                <img className="love4" src={love4} alt="" />
+                <button className="button">Gifts</button>
               </div>
             </Link>
 
             <Link to={"/products"}>
-              <div className="professional-right-2">
-                <img className="professional5" src={professional5} alt="" />
-                <button className="button">Professional_Name5</button>
+              <div className="love-right-2">
+                <img className="love5" src={love5} alt="" />
+                <button className="button">Cakes</button>
               </div>
             </Link>
           </div>
@@ -64,4 +64,4 @@ const Professionals = () => {
   );
 };
 
-export default Professionals;
+export default BecauseLove;
