@@ -73,7 +73,7 @@ const MoreUs = () => {
                 color=" rgba(44, 20, 79, 0.7)"
               />
               <p className="title">Convenient payment</p>
-              <p>Pay cash both online and at the door</p>
+              <p>You can pay both online and at the door</p>
             </div>
             <div className="satisfaction icons-adaptive">
               <MdOutlineSentimentSatisfied
@@ -82,7 +82,7 @@ const MoreUs = () => {
                 color=" rgba(44, 20, 79, 0.7)"
               />
               <p className="title">Satisfaction</p>
-              <p>We strive to please you</p>
+              <p>Our project focuses on establishing an outstanding online food shopping experience by developing a user-friendly e-commerce platform that not only facilitates easy grocery purchases but also provides a delightful shopping environment, offering personalized meal suggestions based on individual tastes and cart contents, ultimately aiming to simplify food shopping and meal planning.</p>
             </div>
           </div>
         </div>
