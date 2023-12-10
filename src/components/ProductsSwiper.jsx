@@ -12,8 +12,8 @@ const ProductsSwiper = () => {
   return (
     <div>
       <div className="newOne">
-        <h1>Flowers</h1>
-        <div className="flowers-swiper-wrapper-container">
+        <h1>Food</h1>
+        <div className="food-swiper-wrapper-container">
           <Swiper
             breakpoints={{
               300: {
