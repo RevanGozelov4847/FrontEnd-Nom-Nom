@@ -1,14 +1,16 @@
 import { Navigation, Pagination, Scrollbar } from "swiper";
 import "swiper/swiper.min.css";
-import swiperImage1 from "../assets/images/becauseLove-1.png";//meat
-import swiperImage2 from "../assets/images/becauseLove-1.png";//fruits
-import swiperImage3 from "../assets/images/becauseLove-1.png";//vegetables
-import swiperImage4 from "../assets/images/becauseLove-1.png";//grains
-import swiperImage5 from "../assets/images/becauseLove-1.png";//herbs
-import swiperImage6 from "../assets/images/becauseLove-1.png";//spices
-import swiperImage7 from "../assets/images/becauseLove-1.png";//diary products
-import swiperImage8 from "../assets/images/becauseLove-1.png";//oils
-import swiperImage9 from "../assets/images/becauseLove-1.png";//drinks
+import swiperImage1 from "../assets/images/meat.jpeg";//meat
+import swiperImage2 from "../assets/images/fruits.jpg";//fruits
+import swiperImage3 from "../assets/images/Vegetables.jpeg";//vegetables
+import swiperImage4 from "../assets/images/grains.jpg";//grains
+import swiperImage5 from "../assets/images/herbs.jpg";//herbs
+import swiperImage6 from "../assets/images/spices.jpg";//spices
+import swiperImage7 from "../assets/images/diary_products.jpg";//diary products
+import swiperImage8 from "../assets/images/oils.jpg";//oils
+import swiperImage9 from "../assets/images/drinks.webp";//drinks
+import swiperImage10 from "../assets/images/souces.jpg";//drinks
+
 
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -135,6 +137,17 @@ const SwiperComponent = () => {
               <span className="swiper-slide-span">Drinks</span>
               <div className="swiper-slide-img-block">
                 <img src={swiperImage9} alt="" />
+              </div>
+            </div>
+          </Link>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Link to={"/products"}>
+            <div className="swiper-slide-card">
+              <span className="swiper-slide-span">Souces</span>
+              <div className="swiper-slide-img-block">
+                <img src={swiperImage10} alt="" />
               </div>
             </div>
           </Link>
