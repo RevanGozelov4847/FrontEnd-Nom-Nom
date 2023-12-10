@@ -6,7 +6,7 @@ import love3 from "../assets/images/becauseLove-3.png";
 import love4 from "../assets/images/becauseLove-4.png";
 import love5 from "../assets/images/becauseLove-5.png";
 
-const BecauseLove = () => {
+const Professionals = () => {
   return (
     <section>
       <div className="containerMore">
@@ -64,4 +64,4 @@ const BecauseLove = () => {
   );
 };
 
-export default BecauseLove;
+export default Professionals;
