@@ -10,12 +10,12 @@ const Professionals = () => {
   return (
     <section>
       <div className="containerMore">
-        <p className="title">Because you love</p>
+        <p className="title">Health Professionals</p>
         <p className="description-1">
-          Olee-da olan bütün məhsullar geri qaytarma.
+            You Can See all Professionals
         </p>
         <p className="description-2">
-          Sifarişlərinizi həm təhvil alarkən qapıda.
+           Health Professionals with Their Quotes
         </p>
         <div className="loveImages">
           <div className="love-left">
