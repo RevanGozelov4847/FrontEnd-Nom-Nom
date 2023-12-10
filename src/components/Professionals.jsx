@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import love1 from "../assets/images/becauseLove-1.png";
-import love2 from "../assets/images/becauseLove-2.png";
-import love3 from "../assets/images/becauseLove-3.png";
-import love4 from "../assets/images/becauseLove-4.png";
-import love5 from "../assets/images/becauseLove-5.png";
+import prof1 from "";
+import prof2 from "";
+import prof3 from "";
+import prof4 from "";
+import prof5 from "";
 
 const Professionals = () => {
   return (
@@ -17,43 +17,43 @@ const Professionals = () => {
         <p className="description-2">
            Health Professionals with Their Quotes
         </p>
-        <div className="loveImages">
-          <div className="love-left">
+        <div className="profImages">
+          <div className="prof-left">
             <Link to={"/products"}>
-              <div className="love-left-1">
-                <img className="love1" src={love1} alt="" />
+              <div className="prof-left-1">
+                <img className="prof1" src={prof1} alt="" />
                 <button className="button">Cookies</button>
               </div>
             </Link>
 
             <Link to={"/products"}>
-              <div className="love-left-2">
-                <img className="love2" src={love2} alt="" />
+              <div className="prof-left-2">
+                <img className="prof2" src={prof2} alt="" />
                 <button className="button">Porfumery</button>
               </div>
             </Link>
           </div>
 
           <Link to={"/products"}>
-            <div className="love-center">
-              <div className="love-center-1">
-                <img className="love3" src={love3} alt="" />
+            <div className="prof-center">
+              <div className="prof-center-1">
+                <img className="prof3" src={prof3} alt="" />
                 <button className="button">Flowers</button>
               </div>
             </div>
           </Link>
 
-          <div className="love-right">
+          <div className="prof-right">
             <Link to={"/products"}>
-              <div className="love-right-1">
-                <img className="love4" src={love4} alt="" />
+              <div className="prof-right-1">
+                <img className="prof4" src={prof4} alt="" />
                 <button className="button">Gifts</button>
               </div>
             </Link>
 
             <Link to={"/products"}>
-              <div className="love-right-2">
-                <img className="love5" src={love5} alt="" />
+              <div className="prof-right-2">
+                <img className="prof5" src={prof5} alt="" />
                 <button className="button">Cakes</button>
               </div>
             </Link>
