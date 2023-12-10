@@ -69,15 +69,18 @@ const NavBar = () => {
       )}
       <div className="navbarBottom">
         <div className="container">
-          <div className="dropdownAlls">
-            <div className="dropdown">
+        
+          {/* <div className="dropdownAlls">
+            
+           <div className="dropdown">
               <button className="dropbtn">Purpose</button>
               <div className="dropdown-content">
                 <a href="#">Bilik gunu</a>
                 <a href="#">Yeni is</a>
                 <a href="#">Dogum gunu</a>
               </div>
-            </div>
+            </div> 
+
             <div className="dropdown">
               <button className="dropbtn">Flowers</button>
               <div className="dropdown-content">
@@ -86,14 +89,16 @@ const NavBar = () => {
                 <a href="#">Qutu ve Sebet</a>
                 <a href="#">Bilik gunu</a>
               </div>
-            </div>
-            <div className="dropdown">
+            </div> 
+
+          <div className="dropdown">
               <button className="dropbtn">Christmas tree</button>
               <div className="dropdown-content">
                 <a href="#">Ozel gunler</a>
               </div>
-            </div>
-          </div>
+            </div> 
+          </div>  */}
+
           <div className="navbarbottomRight">
             <TbLocation className="locationIcon" fontSize="1.7rem" />
             <span>Follow the order</span>
