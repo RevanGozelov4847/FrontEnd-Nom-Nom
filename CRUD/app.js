@@ -231,13 +231,13 @@ const products = [
     id: "31",
     name: "Tomato",    
     price: 699,
-    productImage: "uploads/mussels.jpeg",
+    productImage: "uploads/tomato.jpg",
   },
     {
     id: "32",
     name: "Cucumber",    
     price: 699,
-    productImage: "uploads/mussels.jpeg",
+    productImage: "uploads/cucumber.jpg",
   },
     {
     id: "33",
