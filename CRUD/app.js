@@ -241,7 +241,7 @@ const products = [
   },
     {
     id: "33",
-    name: "Brocoli",    
+    name: "Brocсoli",    
     price: 699,
     productImage: "uploads/mussels.jpeg",
   },
@@ -324,6 +324,8 @@ const products = [
     price: 699,
     productImage: "uploads/mussels.jpeg",
   },
+
+  //grains
       {
     id: "38",
     name: "Garlic",    
