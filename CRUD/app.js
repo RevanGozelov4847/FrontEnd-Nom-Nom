@@ -40,6 +40,7 @@ app.use("/uploads", express.static("uploads"));
 /*********ROUTES**********/
 
 const products = [
+  //MEAT
   {
     id: "1",
     name: "Meat",
@@ -94,6 +95,8 @@ const products = [
     price: 699,
     productImage: "uploads/tuna.jpeg",
   },
+
+  //FRUITES
       {
     id: "10",
     name: "Apple",    
@@ -180,98 +183,204 @@ const products = [
   },
     {
     id: "24",
-    name: "Kiwi",    
-    price: 699,
-    productImage: "uploads/mussels.jpeg",
-  },
-    {
-    id: "25",
     name: "Blackberry",    
     price: 699,
     productImage: "uploads/mussels.jpeg",
   },
     {
-    id: "26",
+    id: "25",
     name: "Apricot",    
     price: 699,
     productImage: "uploads/mussels.jpeg",
   },
     {
-    id: "27",
+    id: "26",
     name: "Grapefruit",    
     price: 699,
     productImage: "uploads/mussels.jpeg",
   },
     {
-    id: "28",
+    id: "27",
     name: "Avacado",    
     price: 699,
     productImage: "uploads/mussels.jpeg",
   },
     {
-    id: "16",
-    name: "Kiwi",    
+    id: "28",
+    name: "Blueberry",    
     price: 699,
     productImage: "uploads/mussels.jpeg",
   },
     {
-    id: "16",
-    name: "Kiwi",    
+    id: "29",
+    name: "Raspberry",    
     price: 699,
     productImage: "uploads/mussels.jpeg",
   },
     {
-    id: "16",
-    name: "Kiwi",    
+    id: "30",
+    name: "Figs",    
+    price: 699,
+    productImage: "uploads/mussels.jpeg",
+  },
+
+
+  //VEGETABLES
+
+    {
+    id: "31",
+    name: "Tomato",    
     price: 699,
     productImage: "uploads/mussels.jpeg",
   },
     {
-    id: "16",
-    name: "Kiwi",    
+    id: "32",
+    name: "Cucumber",    
     price: 699,
     productImage: "uploads/mussels.jpeg",
   },
     {
-    id: "16",
-    name: "Kiwi",    
+    id: "33",
+    name: "Brocoli",    
     price: 699,
     productImage: "uploads/mussels.jpeg",
   },
     {
-    id: "16",
-    name: "Kiwi",    
+    id: "34",
+    name: "Potato",    
     price: 699,
     productImage: "uploads/mussels.jpeg",
   },
     {
-    id: "16",
-    name: "Kiwi",    
+    id: "35",
+    name: "Carrot",    
     price: 699,
     productImage: "uploads/mussels.jpeg",
   },
     {
-    id: "16",
-    name: "Kiwi",    
+    id: "36",
+    name: "Mushroom",    
     price: 699,
     productImage: "uploads/mussels.jpeg",
   },
     {
-    id: "16",
-    name: "Kiwi",    
-    price: 699,
-    productImage: "uploads/mussels.jpeg",
-  },
-    {
-    id: "16",
-    name: "Kiwi",    
+    id: "37",
+    name: "Cabbage",    
     price: 699,
     productImage: "uploads/mussels.jpeg",
   },
   
     {
-    id: "16",
-    name: "Kiwi",    
+    id: "38",
+    name: "Garlic",    
+    price: 699,
+    productImage: "uploads/mussels.jpeg",
+  },
+      {
+    id: "39",
+    name: "Corn",    
+    price: 699,
+    productImage: "uploads/mussels.jpeg",
+  },
+      {
+    id: "40",
+    name: "Cauliflower",    
+    price: 699,
+    productImage: "uploads/mussels.jpeg",
+  },
+      {
+    id: "41",
+    name: "Pumpkin",    
+    price: 699,
+    productImage: "uploads/mussels.jpeg",
+  },
+      {
+    id: "42",
+    name: "Spinach",    
+    price: 699,
+    productImage: "uploads/mussels.jpeg",
+  },
+      {
+    id: "43",
+    name: "Zucchini",    
+    price: 699,
+    productImage: "uploads/mussels.jpeg",
+  },
+      {
+    id: "44",
+    name: "Radish",    
+    price: 699,
+    productImage: "uploads/mussels.jpeg",
+  },
+      {
+    id: "45",
+    name: "Turnip",    
+    price: 699,
+    productImage: "uploads/mussels.jpeg",
+  },
+      {
+    id: "38",
+    name: "Garlic",    
+    price: 699,
+    productImage: "uploads/mussels.jpeg",
+  },
+      {
+    id: "38",
+    name: "Garlic",    
+    price: 699,
+    productImage: "uploads/mussels.jpeg",
+  },
+      {
+    id: "38",
+    name: "Garlic",    
+    price: 699,
+    productImage: "uploads/mussels.jpeg",
+  },
+      {
+    id: "38",
+    name: "Garlic",    
+    price: 699,
+    productImage: "uploads/mussels.jpeg",
+  },
+      {
+    id: "38",
+    name: "Garlic",    
+    price: 699,
+    productImage: "uploads/mussels.jpeg",
+  },
+      {
+    id: "38",
+    name: "Garlic",    
+    price: 699,
+    productImage: "uploads/mussels.jpeg",
+  },
+      {
+    id: "38",
+    name: "Garlic",    
+    price: 699,
+    productImage: "uploads/mussels.jpeg",
+  },
+      {
+    id: "38",
+    name: "Garlic",    
+    price: 699,
+    productImage: "uploads/mussels.jpeg",
+  },
+      {
+    id: "38",
+    name: "Garlic",    
+    price: 699,
+    productImage: "uploads/mussels.jpeg",
+  },
+      {
+    id: "38",
+    name: "Garlic",    
+    price: 699,
+    productImage: "uploads/mussels.jpeg",
+  },
+      {
+    id: "38",
+    name: "Garlic",    
     price: 699,
     productImage: "uploads/mussels.jpeg",
   },
