@@ -1,5 +1,4 @@
 import AnimatedPage from "../AnimatedPage";
-import BecauseLove from "../components/BecauseLove";
 import MoreUs from "../components/MoreUs";
 import ProductSwiper from "../components/ProductsSwiper";
 import SwiperComponent from "../components/SwiperComponent";
@@ -10,7 +9,6 @@ const Home = () => {
       <AnimatedPage>
         <SwiperComponent />
         <MoreUs />
-        <BecauseLove />
         <ProductSwiper />
       </AnimatedPage>
     </div>
