@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import loginImage from "../../src/assets/images/loginImage.jpg";
+import loginImage from "../../src/assets/images/loginImage.png";
 import * as yup from "yup";
 
 const schema = yup.object().shape({
