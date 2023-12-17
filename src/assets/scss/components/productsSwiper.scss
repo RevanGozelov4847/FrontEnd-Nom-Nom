@@ -1,6 +1,6 @@
 .newOne {
   margin: 0 11%;
-  .food-swiper-wrapper-container {
+  .flowers-swiper-wrapper-container {
     width: 100%;
     display: flex;
     align-items: center;
@@ -23,6 +23,31 @@
       align-items: center;
       justify-content: center;
       gap: 20px;
+    }
+    .custom-prev-button,
+    .custom-next-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      z-index: 10;
+      cursor: pointer;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+      font-weight: bold;
+    }
+
+    .custom-prev-button {
+      left: 10px;
+    }
+
+    .custom-next-button {
+      right: 10px;
     }
   }
 

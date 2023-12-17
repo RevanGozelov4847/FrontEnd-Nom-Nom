@@ -14,7 +14,7 @@ const CartProduct = () => {
       {cart.map((item) => (
         <div className="cart" key={item.id}>
           <div className="imgContainer">
-            <img src={`http://localhost:5004/${item?.productImage}`} alt="" />
+            <img src={`C:/Users/gozel/OneDrive - ADA University/Desktop/API/wwwroot/uploads/images/${item.image}`} alt="" />
           </div>
           <div className="cartInfo">
             <div className="headline">

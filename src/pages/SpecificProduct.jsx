@@ -1,16 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { CartContext } from "../cartContext";
-import Accordion from "../components/Accordion";
 import ProductSwiper from "../components/ProductsSwiper";
 import ResponsiveAccordion from "../components/ResponsiveAccordion";
 import Swal from "sweetalert2";
-import {
-  AiOutlineHeart,
-  AiOutlineWhatsApp,
-  AiTwotoneHeart,
-} from "react-icons/ai";
+import { AiOutlineHeart, AiTwotoneHeart, AiOutlineWhatsApp } from "react-icons/ai";
 import AnimatedPage from "../AnimatedPage";
+import axios from "axios";
 
 const SpecificProduct = () => {
   const {
@@ -22,6 +18,7 @@ const SpecificProduct = () => {
   } = useContext(CartContext);
   const [product, setProduct] = useState(null);
   const { id } = useParams();
+  const productId = parseInt(id, 10);
 
   const handleToggleWishlist = (newProduct) => {
     setIsInWishlist(!isInWishlist);
@@ -48,20 +45,28 @@ const SpecificProduct = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5004/api/products/${id}`)
-      .then((res) => res.json())
-      .then((data) => setProduct(data));
-  }, [id]);
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`https://localhost:5000/api/Product/${productId}`);
+        setProduct(response.data);
+      } catch (error) {
+        console.error("Error fetching product:", error);
+      }
+    };
+
+    fetchData();
+  }, [productId]);
+
+  if (!product) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <AnimatedPage>
       <div className="specificProduct">
         <div className="imgAccordion">
           <div className="imgContainer">
-            <img
-              src={`http://localhost:5004/${product?.productImage}`}
-              alt=""
-            />
+            <img src={`https://localhost:5000/uploads/images/${product.image}`} alt={product.name} />
             <div className="heartIcon" onClick={handleToggleWishlist}>
               {isInWishlist ? (
                 <AiTwotoneHeart
@@ -79,14 +84,15 @@ const SpecificProduct = () => {
               )}
             </div>
           </div>
-          <div className="accord">
-            <Accordion />
-          </div>
+
         </div>
 
         <div className="infoProduct">
           <div className="headline">
             <p>{product?.name}</p>
+            <div className="description">
+              <p>{product?.description}</p>
+            </div>
             <div className="process">
               <span>
                 <i className="fa-regular fa-clock"></i>

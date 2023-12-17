@@ -17,10 +17,8 @@ const Favorites = () => {
       {favorite.map((prod) => (
         <div className="carte" key={prod.id}>
           <div className="imgContainere">
-            <img
-              src={`http://localhost:5004/${prod?.productImage}`}
-              alt="product favorites"
-            />
+          <img src={`C:/Users/gozel/OneDrive - ADA University/Desktop/API/wwwroot/uploads/images/${prod.image}`} alt="" />
+
           </div>
           <div className="cartInfoe">
             <div className="headlinee">

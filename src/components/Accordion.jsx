@@ -12,7 +12,8 @@ function Tabs() {
         <button
           className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
           onClick={() => toggleTab(1)}
-        > About the product
+        >
+          About the product
         </button>
         <button
           className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
@@ -26,22 +27,30 @@ function Tabs() {
         <div
           className={toggleState === 1 ? "content  active-content" : "content"}
         >
-          <p>Info</p>
+          <p>eustoma</p>
         </div>
 
         <div
           className={toggleState === 2 ? "content  active-content" : "content"}
         >
           <p>
-          Our purpose is providing the best of the service, and to achive that we use the Risk Free Delivery Module.<br />If the product is delivered (cash or online does not matter), it is immediately refunded if it is not inappropriate for your request and is replaced with a higher value of a higher value. <br />
-            <br />Delivery is executed fast with the Private NomNom Premium car.
+            Siz xidmətin ən yaxşısına layiqsiniz , bunun üçün risksiz çatdırılma
+            modulundan istifadə edirik. <br /> Məhsul çatdırılarkən ( nəğd və ya
+            qeyri nəğd ödəmə fərqi olmadan ) istəyinizə uyğun olmayan hal olarsa
+            dərhal geri qaytarılır və daha yüksək qiymətli yeni məhsulla əvəz
+            edilir. <br />
+            <br /> Çatdırılma özəl Olee Premium avtomobili ilə sürətli icra
+            olunur.
             <br />
-            <br /> Our special service employees always work continuously for better.
+            <br /> Xüsusi xidmət almış əməkdaşlarımız daima daha yaxşısı üçün
+            fasiləsiz çalışır.
             <br />
-            <br />Delivery is assessed in accordance with the territory of free, Sumgayit, Khirdalan and Baku villages for the Baku Center.{" "}
+            <br /> Çatdırılma Bakı şəhəri mərkəzi üçün PULSUZ , Sumqayıt ,
+            Xırdalan və Bakı kəndlərinə isə əraziyə uyğun qiymətləndirilir.{" "}
             <br />
             <br />
-           You can get fast delivery in advance by the time and date.
+            Əvvəlcədən seçilmiş vaxta və tarixə görə sürətli çatdırılma əldə edə
+            bilərsiniz
           </p>
         </div>
       </div>

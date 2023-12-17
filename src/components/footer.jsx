@@ -1,5 +1,5 @@
 import React from "react";
-import footerLogo from "../assets/images/footer-logo.png";
+import footerLogo from "../assets/images/footer-logo.jpg";
 import facebook from "../assets/images/facebook.png";
 import instagram from "../assets/images/instagram.png";
 import whatsapp from "../assets/images/whatsapp.png";
@@ -16,7 +16,7 @@ const Footer = () => {
               <img src={footerLogo} alt="logo" />
             </div>
             <p className="footer1Description">
-              Everything that makes your moments special and memorable
+              Marvelous ideas from mythical minds
             </p>
             <div className="social">
               <Link to={"https://www.facebook.com/"}>
@@ -40,30 +40,23 @@ const Footer = () => {
               <p>Follow the order</p>
             </div>
           </div>
-          
-          {/* <div className="footer2">
-            <p className="title">Categories</p>
-            <p>Flowers</p>
-            <p>Christmas tree</p>
-          </div> */}
-
-          <div className="footer2">
-            <p className="title">NomNom</p>
+          <div className="footer3">
+            <p className="title">NOMNOM</p>
             <p>Blog</p>
             <p>About us</p>
             <p>Terms of use</p>
             <p>Help</p>
           </div>
-          <div className="footer3">
+          <div className="footer4">
             <p>Refund</p>
             <p>Delivery</p>
           </div>
-          <div className="footer4">
+          <div className="footer5">
             <p className="title">Contact</p>
-            <p>nomnom23@gmail.com</p>
+            <p>nomnom44@gmail.com</p>
             <p>+994516235933</p>
             <p>
-              Baku city, Ganjlik District.
+              Baku city, Narimanov district, Fatali Xan - Xoyski street. 130
             </p>
           </div>
         </div>
@@ -71,7 +64,7 @@ const Footer = () => {
           <span className="bottomLeft">© 2023. All rights reserved.</span>
           <div className="bottomCenter">
             <p>Made by</p>
-            <p className="centerBottom">united skills</p>
+            <p className="centerBottom">Hydra Team</p>
           </div>
           <div className="bottomRight">
             <img src={footerVisa} alt="" />

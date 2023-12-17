@@ -1,7 +1,6 @@
-import swiperImage1 from "../assets/images/meal1.jpeg";
-import swiperImage2 from "../assets/images/meal2.jpeg";
-import swiperImage3 from "../assets/images/meal3.jpeg";
-import swiperImage4 from "../assets/images/meal4.jpeg"
+import swiperImage1 from "../assets/images/moreUsSwiper-1.jpg";
+import swiperImage2 from "../assets/images/moreUsSwiper-2.jpeg";
+import swiperImage3 from"../assets/images/moreUsSwiper-3.webp";
 
 import "swiper/css/pagination";
 import React from "react";
@@ -34,21 +33,14 @@ const MoreUs = () => {
                 <img src={swiperImage1} alt={"iame"} />
               </div>
             </SwiperSlide>
-
             <SwiperSlide>
               <div className="imgContainer">
                 <img src={swiperImage2} alt={"sc"} />
               </div>
             </SwiperSlide>
-            
-            <SwiperSlide>
+               <SwiperSlide>
               <div className="imgContainer">
-                <img src={swiperImage3} alt={""} />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="imgContainer">
-                <img src={swiperImage4} alt={""} />
+                <img src={swiperImage3} alt={"sc"} />
               </div>
             </SwiperSlide>
           </Swiper>
@@ -74,9 +66,9 @@ const MoreUs = () => {
                   color=" rgba(44, 20, 79, 0.7)"
                 />
               </div>
-              <p className="title">Special preparation</p>
-              <p>All orders to you</p>
-              <p>It is prepared specially</p>
+              <p className="title">Contact with Professionals</p>
+              <p>You can see their nutritions information.</p>
+              <p>It is prepared specially for you to live healthy life.</p>
             </div>
           </div>
           <div className="rightAbout">
@@ -86,8 +78,8 @@ const MoreUs = () => {
                 fontSize="2.6rem"
                 color=" rgba(44, 20, 79, 0.7)"
               />
-              <p className="title">Convenient payment</p>
-              <p>You can pay both online and at the door</p>
+              <p className="title">Secure payment</p>
+              <p>Pay cash both online and at the door without worrying about your security.</p>
             </div>
             <div className="satisfaction icons-adaptive">
               <MdOutlineSentimentSatisfied
@@ -96,7 +88,7 @@ const MoreUs = () => {
                 color=" rgba(44, 20, 79, 0.7)"
               />
               <p className="title">Satisfaction</p>
-              <p>Our project focuses on establishing an outstanding online food shopping experience by developing a user-friendly e-commerce platform that not only facilitates easy grocery purchases but also provides a delightful shopping environment, offering personalized meal suggestions based on individual tastes and cart contents, ultimately aiming to simplify food shopping and meal planning.</p>
+              <p>Full belly is a happy belly!</p>
             </div>
           </div>
         </div>

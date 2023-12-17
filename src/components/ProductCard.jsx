@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import { AiOutlineHeart, AiTwotoneHeart } from "react-icons/ai";
 
 const ProductCard = ({ item }) => {
   const [isInWishlist, setIsInWishlist] = useState(false);
+
   const handleToggleWishlist = () => {
     setIsInWishlist(!isInWishlist);
   };
@@ -21,11 +21,8 @@ const ProductCard = ({ item }) => {
             )}
           </div>
         </span>
-        <img
-          className="product-img"
-          src={`http://localhost:5004/${item.productImage}`}
-          alt="heyo"
-        />
+        <img src={`https://localhost:5000/uploads/images/${item.image}`} alt={item.name} />
+
       </div>
       <div className="cardInfo">
         <div className="cardPopular">

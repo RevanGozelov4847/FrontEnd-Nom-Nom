@@ -1,6 +1,6 @@
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
-import Footer from "./components/footer";
+import Footer from "./components/Footer";
 import Products from "./pages/Products";
 import SpecificProduct from "./pages/SpecificProduct";
 import Cart from "./pages/Cart";
@@ -22,6 +22,7 @@ import "./assets/scss/main.scss";
 import Loader from "./components/Loader";
 
 function App() {
+  
   const location = useLocation();
   const navigate = useNavigate();
   const [isUser, setIsUser] = useState(false);

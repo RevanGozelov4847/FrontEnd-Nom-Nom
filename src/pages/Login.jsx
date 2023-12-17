@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import loginImage from "../../src/assets/images/loginImage.png";
+import loginImage from "../../src/assets/images/loginImage.jpg";
 import * as yup from "yup";
 
 const schema = yup.object().shape({
   email: yup
     .string()
     .email("Enter email")
-    .required("Enter duzgun email")
+    .required("Enter the correct email")
     .matches(
       /^[a-z0-9](\.?[a-z0-9]){5,}@g(oogle)?mail\.com$/,
       "Please enter 'example@gmail.com' format"

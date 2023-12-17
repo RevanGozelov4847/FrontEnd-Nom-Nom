@@ -35,17 +35,26 @@
       .footer1 {
         width: 20%;
         padding-right: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
         .imgContainer {
           margin-bottom: 37px;
           margin-top: 15px;
         }
+        img {
+              max-width: 100%;
+              height: auto;
+                    }
         .footer1Description {
           line-height: 1.5rem;
+            text-align: center;
         }
         .social {
           display: flex;
           gap: 18px;
-          margin: 24px 0px 32px;
+          margin: 12px 0;
           .facebook,
           .whatsapp,
           .instagram {
@@ -68,17 +77,14 @@
           width: 80%;
         }
       }
-      // .footer2 {
-      //   width: 20%;
-      // }
-      .footer2 {
+      .footer3 {
         width: 20%;
       }
-      .footer3 {
+      .footer4 {
         width: 20%;
         margin-top: 115px;
       }
-      .footer4 {
+      .footer5 {
         width: 20%;
       }
     }
@@ -139,17 +145,17 @@
             margin: 0 0 8px 0;
           }
         }
-        // .footer2 {
-        //   width: 100%;
-        // }
         .footer2 {
-          width: 50%;
+          width: 100%;
         }
         .footer3 {
           width: 50%;
-          margin-top: 45px;
         }
         .footer4 {
+          width: 50%;
+          margin-top: 45px;
+        }
+        .footer5 {
           width: 100%;
           margin-bottom: 20px;
         }

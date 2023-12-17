@@ -1,60 +1,60 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import prof1 from "";
-import prof2 from "";
-import prof3 from "";
-import prof4 from "";
-import prof5 from "";
+import professional1 from "";
+import professional2 from "";
+import professional3 from "";
+import professional4 from "";
+import professional5 from "";
 
 const Professionals = () => {
   return (
     <section>
       <div className="containerMore">
-        <p className="title">Dieticians and Nutritionists</p>
+        <p className="title">Professionals with Quotes</p>
         <p className="description-1">
-            You Can See all Dieticians and Nutritionists 
+          Olee-da olan bütün məhsullar geri qaytarma.
         </p>
         <p className="description-2">
-           Dieticians and Nutritionists with Their Quotes
+          Sifarişlərinizi həm təhvil alarkən qapıda.
         </p>
-        <div className="profImages">
-          <div className="prof-left">
+        <div className="professionalImages">
+          <div className="professional-left">
             <Link to={"/products"}>
-              <div className="prof-left-1">
-                <img className="prof1" src={prof1} alt="" />
-                <button className="button">Dr. Megan Rossi</button>
+              <div className="professional-left-1">
+                <img className="professional1" src={professional1} alt="" />
+                <button className="button">Professional_Name1</button>
               </div>
             </Link>
 
             <Link to={"/products"}>
-              <div className="prof-left-2">
-                <img className="prof2" src={prof2} alt="" />
-                <button className="button">Tim Spector </button>
+              <div className="professional-left-2">
+                <img className="professional2" src={professional2} alt="" />
+                <button className="button">Professional_Name2</button>
               </div>
             </Link>
           </div>
 
           <Link to={"/products"}>
-            <div className="prof-center">
-              <div className="prof-center-1">
-                <img className="prof3" src={prof3} alt="" />
-                <button className="button">Christy Harrison</button>
+            <div className="professional-center">
+              <div className="professional-center-1">
+                <img className="professional3" src={professional3} alt="" />
+                <button className="button">Professional_Name3</button>
               </div>
             </div>
           </Link>
 
-          <div className="prof-right">
+          <div className="professional-right">
             <Link to={"/products"}>
-              <div className="prof-right-1">
-                <img className="prof4" src={prof4} alt="" />
-                <button className="button"> Alissa Rumsey </button>
+              <div className="professional-right-1">
+                <img className="professional4" src={professional4} alt="" />
+                <button className="button">Professional_Name4</button>
               </div>
             </Link>
 
             <Link to={"/products"}>
-              <div className="prof-right-2">
-                <img className="prof5" src={prof5} alt="" />
-                <button className="button">Rhiannon Lambert</button>
+              <div className="professional-right-2">
+                <img className="professional5" src={professional5} alt="" />
+                <button className="button">Professional_Name5</button>
               </div>
             </Link>
           </div>

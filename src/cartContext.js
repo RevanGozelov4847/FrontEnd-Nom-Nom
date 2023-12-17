@@ -14,20 +14,29 @@ export const CartProvider = ({ children }) => {
   const [isUser, setIsUser] = useState(true);
   const [isInWishlist, setIsInWishlist] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
+  const [categoryFilter, setCategoryFilter] = useState(null); // New state for category filter
 
   useEffect(() => {
     getData();
-  }, []);
+  }, [categoryFilter]); // Update the useEffect dependency
 
   const getData = async () => {
     try {
-      await axios.get(`http://localhost:5004/api/products`).then((res) => {
-        setProducts(res.data);
-      });
+      let url = "https://localhost:5000/api/Product/get_all";
+
+      // Check if a category filter is applied
+      if (categoryFilter) {
+        url += `?category_id=${categoryFilter}`;
+      }
+
+      const response = await axios.get(url);
+      setProducts(response.data);
     } catch (error) {
-      console.log(error);
+      console.error("Error:", error);
     }
   };
+
+  
 
   const addToCart = (newProduct) => {
     const checkExisting = cart.find((product) => product.id === newProduct.id);
@@ -161,6 +170,9 @@ export const CartProvider = ({ children }) => {
     setIsInWishlist,
     searchTerm,
     setSearchTerm,
+    categoryFilter, 
+    setCategoryFilter,
+
   };
 
   return <CartContext.Provider value={values}>{children}</CartContext.Provider>;

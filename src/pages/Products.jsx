@@ -1,15 +1,16 @@
 import React, { useContext, useState } from "react";
 import { CartContext } from "../cartContext";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
 import AnimatedPage from "../AnimatedPage";
 
 const Products = () => {
-  const { products, searchTerm } = useContext(CartContext);
+  const { products, searchTerm, setCategoryFilter } = useContext(CartContext);
   const [isOpen, setIsOpen] = useState(false);
   const [isOpened, setIsOpened] = useState(false);
   const [minPrice, setMinPrice] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
+  const location = useLocation();
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -33,7 +34,6 @@ const Products = () => {
                          (!maxPrice || product.price <= parseFloat(maxPrice));
     return nameMatches && priceMatches;
   };
-  
 
   const filteredProducts = products.filter(filterProducts);
 
@@ -100,7 +100,9 @@ const Products = () => {
                 </div>
               )}
             </div>
-            <button>Search</button>
+            <Link to={`/products${location.search}`}>
+              <button onClick={() => setCategoryFilter(null)}>Search</button>
+            </Link>
           </div>
           <div className="resultProducts">
             {filteredProducts.map((item) => (
