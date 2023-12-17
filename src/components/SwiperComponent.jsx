@@ -1,13 +1,11 @@
-
-//  import swiperImage1 from "../assets/images/becauseLove-1.png";//meat
-import swiperImage2 from "../assets/images/becauseLove-1.png";//fruits
-import swiperImage3 from "../assets/images/becauseLove-1.png";//vegetables
-import swiperImage4 from "../assets/images/becauseLove-1.png";//grains
-import swiperImage5 from "../assets/images/becauseLove-1.png";//herbs
-import swiperImage6 from "../assets/images/becauseLove-1.png";//spices  
-// // import swiperImage7 from "../assets/images/becauseLove-1.png";//diary products
-// // import swiperImage8 from "../assets/images/becauseLove-1.png";//oils
-// // import swiperImage9 from "../assets/images/becauseLove-1.png";//drinks
+import swiperImage1 from "../assets/images/meats.jpeg";
+import swiperImage2 from "../assets/images/fruits.jpg";
+import swiperImage3 from "../assets/images/Vegetables.jpg";
+import swiperImage4 from "../assets/images/grains.webp";
+import swiperImage5 from "../assets/images/herbs.jpeg";
+import swiperImage6 from "../assets/images/diary_products.jpg";
+import swiperImage7 from "../assets/images/drinks.jpeg";
+import swiperImage8 from "../assets/images/oils.jpg";
 
 import React, { useState, useEffect, useContext } from "react";
 import { Navigation, Pagination, Scrollbar } from "swiper";
@@ -68,11 +66,15 @@ const SwiperComponent = () => {
              <div className="swiper-slide-card">
                <span className="swiper-slide-span">{category.name}</span>
                <div className="swiper-slide-img-block">
-                 {category.id === 1 && <img src={swiperImage2} alt={category.name} />}
-                 {category.id === 2 && <img src={swiperImage3} alt={category.name} />}
-                 {category.id === 3 && <img src={swiperImage4} alt={category.name} />}
-                 {category.id === 4 && <img src={swiperImage5} alt={category.name} />}
-                 {category.id === 6 && <img src={swiperImage6} alt={category.name} />}
+                 {category.id === 1 && <img src={swiperImage1} alt={category.name} />}
+                 {category.id === 10 && <img src={swiperImage2} alt={category.name} />}
+                 {category.id ===11 && <img src={swiperImage3} alt={category.name} />}
+                 {category.id === 12 && <img src={swiperImage4} alt={category.name} />}
+                 {category.id === 13 && <img src={swiperImage5} alt={category.name} />}
+                 {category.id === 14 && <img src={swiperImage6} alt={category.name} />}
+                 {category.id === 15 && <img src={swiperImage7} alt={category.name} />}
+                 {category.id === 16 && <img src={swiperImage8} alt={category.name} />}
+
                </div>
              </div>
            </Link>

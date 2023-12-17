@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import headerLogo from "../assets/images/header-logo.jpg";
+import headerLogo from "../assets/images/logo.png";
 import CartNumber from "./CartNumber";
 import FavoriteNumber from "./FavoriteNumber";
 import SearchInput from "./SearchInput";

@@ -14,17 +14,15 @@ export const CartProvider = ({ children }) => {
   const [isUser, setIsUser] = useState(true);
   const [isInWishlist, setIsInWishlist] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
-  const [categoryFilter, setCategoryFilter] = useState(null); // New state for category filter
+  const [categoryFilter, setCategoryFilter] = useState(null); 
 
   useEffect(() => {
     getData();
-  }, [categoryFilter]); // Update the useEffect dependency
-
+  }, [categoryFilter]); 
   const getData = async () => {
     try {
       let url = "https://localhost:5000/api/Product/get_all";
 
-      // Check if a category filter is applied
       if (categoryFilter) {
         url += `?category_id=${categoryFilter}`;
       }

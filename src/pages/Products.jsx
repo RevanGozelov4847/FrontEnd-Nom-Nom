@@ -61,14 +61,7 @@ const Products = () => {
               </div>
               {isOpen && (
                 <div className="detailed">
-                  <p>I love you</p>
-                  <p>I congratulate you</p>
-                  <p>Sorry</p>
-                  <p>New job</p>
-                  <p>Because I love it</p>
-                  <p>I'm sorry</p>
                   <p>For newborns</p>
-                  <p>Year anniversary</p>
                   <p>For myself</p>
                 </div>
               )}
